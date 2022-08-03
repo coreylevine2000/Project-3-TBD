@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-node_modules
-=======
 .DS_Store
 node_modules
 .env
 00-practice-app
->>>>>>> a75f00382973bdf157d10f8385b11c41eaba9568
