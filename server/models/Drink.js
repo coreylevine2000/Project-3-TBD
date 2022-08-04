@@ -2,7 +2,7 @@ const Schema = require('mongoose');
 
 const optionsSchema = require('./Options')
 
-const drinkSchema = newSchema({
+const drinkSchema = new Schema({
     name: {
         type: String,
         required: true,
@@ -24,4 +24,6 @@ const drinkSchema = newSchema({
 
 })
 
-const Drink = model("Drink", drinkSchema)
+const Drink = model('Drink', drinkSchema)
+
+module.exports = Drink;
