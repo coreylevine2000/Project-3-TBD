@@ -10,3 +10,7 @@ const optionsSchema = new Schema (
         }
     }
 )
+
+const Options = model("Options", optionsSchema);
+
+module.exports = Options;
