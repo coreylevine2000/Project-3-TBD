@@ -1,6 +1,6 @@
 const Schema = require('mongoose');
 
-optionsSchema = require('./Options')
+const optionsSchema = require('./Options')
 
 const drinkSchema = newSchema({
     name: {
