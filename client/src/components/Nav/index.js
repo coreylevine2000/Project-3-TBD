@@ -15,7 +15,7 @@ function NavStrap(props) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link as={Link} to="/menu">Menu</Nav.Link>
-            <Nav.Link as={Link} to="/cart">Cart</Nav.Link>
+            <Nav.Link as={Link} to="/cart">Tab</Nav.Link>
             <Nav.Link as={Link} to="/profile">Profile</Nav.Link>
             <Nav.Link as={Link} to="/" onClick={() => Auth.logout()}>Logout</Nav.Link>
           </Nav>
@@ -30,7 +30,7 @@ function NavStrap(props) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link as={Link} to="/menu">Menu</Nav.Link>
-            <Nav.Link as={Link} to="/cart">Cart</Nav.Link>
+            <Nav.Link as={Link} to="/cart">Tab</Nav.Link>
             <Nav.Link as={Link} to="/signup">Signup</Nav.Link>
             <Nav.Link as={Link} to="/login">Login</Nav.Link>
           </Nav>
