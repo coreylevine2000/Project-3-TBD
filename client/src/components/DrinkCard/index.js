@@ -71,7 +71,7 @@ function DrinkCard({ item }) {
                                 <Input type="select" name="size" id="exampleSelect" onChange={onChange}>
                                     <option>Select</option>
                                     <option>Single</option>
-                                    <option>Double (+$1.00)</option>
+                                    <option>Double</option>
                                 </Input>
                                 <Label for="exampleSelect">Temperature</Label>
                                 <Input type="select" name="milk" id="exampleSelect" onChange={onChange}>

@@ -3,11 +3,7 @@ import { useMutation } from '@apollo/react-hooks';
 import { ADD_ORDER } from "../utils/mutations";
 import { idbPromise } from "../utils/helpers";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {
-    Container,
-    Row,
-    Col
-} from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 function Success() {
     const [addOrder] = useMutation(ADD_ORDER);

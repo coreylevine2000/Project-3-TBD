@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 
-import { ThemeProvider, Flex, Box, Grid} from '@chakra-ui/core';
+import { ThemeProvider, Flex, Box} from '@chakra-ui/core';
 
 import CategoryMenu from "../components/CategoryMenu";
 import DrinkList from "../components/DrinkList";
