@@ -9,7 +9,7 @@ function NavStrap(props) {
 
   if(Auth.loggedIn()){
     return (
-      <Navbar bg="dark" variant='dark' expand="lg">
+      <Navbar>
         <Navbar.Brand as={Link} to="/">{'READY DRINK GO!'}</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -24,7 +24,7 @@ function NavStrap(props) {
     )
   }else {
     return (
-      <Navbar bg="dark" variant='dark' expand="lg">
+      <Navbar>
         <Navbar.Brand as={Link} to="/">{'READY DRINK GO!'}</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
