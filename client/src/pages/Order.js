@@ -10,8 +10,6 @@ import { QUERY_CHECKOUT } from "../utils/queries"
 import { useLazyQuery } from '@apollo/react-hooks';
 import { Jumbotron, Button, Card } from 'react-bootstrap';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Row, Col, Container } from 'reactstrap';
 
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 

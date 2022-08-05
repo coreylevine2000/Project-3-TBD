@@ -5,7 +5,6 @@ import {  Box, Heading, Text } from '@chakra-ui/core';
 
 import { Jumbotron, Button, Container, Row, Col } from 'react-bootstrap';
 import { Card, CardText, CardImg } from 'reactstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function OrderList({ name, price, ...rest }) {
   return (
