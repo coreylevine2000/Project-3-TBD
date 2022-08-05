@@ -14,7 +14,7 @@ import Success from "./pages/Success";
 
 import Header from './components/Header'
 import Footer from './components/Footer'
-import NavStrap from './components/Nav';
+import Navbar from './components/Navbar';
 
 const client = new ApolloClient({
     request: (operation) => {
@@ -35,7 +35,7 @@ const client = new ApolloClient({
           <div>
             <StoreProvider>
                 <Header />
-                <NavStrap />
+                <Navbar />
                 <Switch>
                   <Route exact path="/" element={<Home />} />
                   <Route exact path="/menu" element={<Menu />} />
