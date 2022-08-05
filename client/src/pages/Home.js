@@ -1,6 +1,4 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Jumbotron, Button, Container, Row, Col, Image } from 'react-bootstrap';
 
 
 function HomeStrap(props) {
