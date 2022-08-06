@@ -32,7 +32,7 @@ export const reducer = ( state, action ) => {
 
         case REMOVE_FROM_CART:
             let newState = state.cart.filert(iser => {
-                return item._id !== action._id;
+                // return item._id !== action._id;
             });
 
             return {

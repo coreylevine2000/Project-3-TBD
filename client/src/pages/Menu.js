@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-// import { useQuery } from '@apollo/react-hooks';
+import { useQuery } from '@apollo/react-hooks';
 
-// import { ThemeProvider, Flex, Box} from '@chakra-ui/core';
+import { ThemeProvider, Flex, Box} from '@chakra-ui/core';
 
 // import CategoryMenu from "../components/CategoryMenu";
 // import DrinkList from "../components/DrinkList";
@@ -12,41 +12,33 @@ import { UPDATE_DRINKS } from "../utils/actions";
 import { idbPromise } from "../utils/helpers";
 
 const Menu = () => {
-    const [state, dispatch] = useStoreContext();
-    const { loading, data } = useQuery(QUERY_ALL_DRINKS);
-console.log("state", state);
-    useEffect(() => {
-        if (data) {
-            dispatch({
-                type: UPDATE_DRINKS,
-                drinks: data.drinks
-            });
+//     const [state, dispatch] = useStoreContext();
+//     const { loading, data } = useQuery(QUERY_ALL_DRINKS);
+// console.log("state", state);
+//     useEffect(() => {
+//         if (data) {
+//             dispatch({
+//                 type: UPDATE_DRINKS,
+//                 drinks: data.drinks
+//             });
 
-            data.drinks.forEach((item) => {
-                idbPromise('drinks', 'put', item);
-            });
-        } else if (!loading) {
-            idbPromise('drinks', 'get').then((drinks) => {
-                dispatch({
-                    type: UPDATE_DRINKS, 
-                    drinks: drinks
-                })
-            })
-        }
-    }, [loading, data, dispatch]);
+//             data.drinks.forEach((item) => {
+//                 idbPromise('drinks', 'put', item);
+//             });
+//         } else if (!loading) {
+//             idbPromise('drinks', 'get').then((drinks) => {
+//                 dispatch({
+// //                     type: UPDATE_DRINKS, 
+// //                     drinks: drinks
+// //                 })
+// //             })
+//         }
+//     }, [loading, data, dispatch]);
 
     return (
-        <ThemeProvider>
-            <Flex wrap="wrap" alignItems='center' justifyContent='center'>
-                <Box>
-                    <Box p={5} alignItems='center' justifyContent='center'>
-                        <CategoryMenu />
-                    </Box>
-                    <DrinkList drinks={state.drinks}/>
-                </Box>
-            </Flex>
-            
-        </ThemeProvider>
+        <div>
+            <h1>FOOD</h1>
+        </div>
     );
 };
 
