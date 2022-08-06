@@ -5,6 +5,7 @@ import Menu from '../pages/Menu';
 import Signup from '../pages/Signup';
 import Order from '../pages/Order';
 import History from '../pages/History';
+import LoginForm from '../pages/LoginForm';
 
 import Header from "./Header";
 import Footer from "./Footer";
@@ -29,6 +30,9 @@ export default function PortfolioContainer() {
     if (currentPage === 'History') {
       return <History />;
     }
+    if (currentPage === 'LoginForm') {
+        return <LoginForm />;
+      }
     return <Home />;
   };
 
@@ -36,10 +40,10 @@ export default function PortfolioContainer() {
 
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
       {renderPage()}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
