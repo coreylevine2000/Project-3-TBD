@@ -5,47 +5,29 @@ function Navbar({ currentPage, handlePageChange }) {
     <ul className="nav nav-bar">
       <li className="nav-item">
         <a
-          href="#menu"
-          onClick={() => handlePageChange('Menu')}
-          className={currentPage === 'Menu' ? 'nav-link active' : 'nav-link'}
+          href="#liquer"
+          onClick={() => handlePageChange('Liquer')}
+          className={currentPage === 'Liquer' ? 'nav-link active' : 'nav-link'}
         >
-          MENU
+          Liquer
         </a>
       </li>
       <li className="nav-item">
         <a
-          href="#order"
-          onClick={() => handlePageChange('Order')}
-          className={currentPage === 'Order' ? 'nav-link active' : 'nav-link'}
+          href="#Beer"
+          onClick={() => handlePageChange('Beer')}
+          className={currentPage === 'Beer' ? 'nav-link active' : 'nav-link'}
         >
-          Your Order
+          Beer
         </a>
       </li>
       <li className="nav-item">
         <a
-          href="#signup"
-          onClick={() => handlePageChange('Signup')}
-          className={currentPage === 'Signin' ? 'nav-link active' : 'nav-link'}
+          href="#non-alcoholic"
+          onClick={() => handlePageChange('Non-Alcoholic')}
+          className={currentPage === 'Non-Alcoholic' ? 'nav-link active' : 'nav-link'}
         >
-          Signup
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="#home"
-          onClick={() => handlePageChange('Home')}
-          className={currentPage === 'Home' ? 'nav-link Home' : 'nav-link'}
-        >
-          Home
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="#profile"
-          onClick={() => handlePageChange('History')}
-          className={currentPage === 'Home' ? 'nav-link History' : 'nav-link'}
-        >
-          Past Orders
+          Non-Alcoholic
         </a>
       </li>
       <li className="nav-item">
