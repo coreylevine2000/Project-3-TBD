@@ -29,7 +29,7 @@ export default function PortfolioContainer() {
     if (currentPage === 'History') {
       return <History />;
     }
-    return <Menu />;
+    return <Home />;
   };
 
   const handlePageChange = (page) => setCurrentPage(page);
