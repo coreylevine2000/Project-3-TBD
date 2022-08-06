@@ -5,7 +5,9 @@ function Footer() {
   
   return (
     <footer>
-      <h1>This profile was created React and a special thanks to YOU for taking the time to look at my profile.</h1>
+      <h1>FUTAR: This one is for the boys:</h1>
+      <p>Everytime you poop, is a good time to pee.</p>
+      <p>Everytime you pee, is not a good time to poop</p>
     </footer>
   );
 }
