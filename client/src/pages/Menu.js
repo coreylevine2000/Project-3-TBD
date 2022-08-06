@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
-import { useQuery } from '@apollo/react-hooks';
+// import { useQuery } from '@apollo/react-hooks';
 
-import { ThemeProvider, Flex, Box} from '@chakra-ui/core';
+// import { ThemeProvider, Flex, Box} from '@chakra-ui/core';
 
-import CategoryMenu from "../components/CategoryMenu";
-import DrinkList from "../components/DrinkList";
+// import CategoryMenu from "../components/CategoryMenu";
+// import DrinkList from "../components/DrinkList";
+
 import { QUERY_ALL_DRINKS } from '../utils/queries';
 import { useStoreContext } from "../utils/GlobalState";
 import { UPDATE_DRINKS } from "../utils/actions";
