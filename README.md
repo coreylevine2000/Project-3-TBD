@@ -1,12 +1,12 @@
-# Final Project: MERN Stack Single-Page Application
+# Final Project: MERN Stack Single-Page Ready Drink GO!
 
-Projects have played a key role in your journey to becoming a full-stack web developer. As we apply for development jobs, our portfolio is absolutely vital to opening doors to opportunities.
+Projects have played a key role in your journey to becoming a full-stack web developer. As we apply for development jobs, our portfolio is absolutely vital to opening doors.
 
 This project shows employers our collaborative skills and coding abilities, especially in the context of a scalable, user-focused MERN app. 
 
 ## Project Requirements
 
-This application works with real-world data to solve a real-world challenged, with a focus on data and user demand. The project fulfills the following requirements:
+This application works with real-world data to solve a real-world challenge, with a focus on data and user demand. The project fulfills the following requirements:
 
 * Use React for the front end.
 
@@ -47,16 +47,6 @@ Ultimately, it doesn't matter which of these options you choose&mdash;it just ne
 ### Payment Platform
 
 Consider integrating the Stripe payment platform. Even if you don’t create an e-commerce application, you could set up your site to accept charitable donations.
-
-### Bonus
-
-Although this is not a requirement for your project, see if you can also implement functionality to meet the minimum requirements of a PWA:
-
-* Uses a web manifest
-
-* Uses a service worker for offline functionality
-
-* Is installable
 
 ## Presentation Requirements
 
