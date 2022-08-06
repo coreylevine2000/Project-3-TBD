@@ -54,7 +54,7 @@ function Navbar({ currentPage, handlePageChange }) {
           onClick={() => handlePageChange('LoginForm')}
           className={currentPage === 'LoginForm' ? 'nav-link LoginForm' : 'nav-link'}
         >
-         Login
+         Login!
         </a>
       </li>
     </ul>
