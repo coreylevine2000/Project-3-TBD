@@ -28,12 +28,12 @@ function App() {
   return (
     <ApolloProvider client={client}>
     <Router>
-    {/* <Header /> */}
+    <Header />
     {/* <Navbar /> */}
       <>
       <MenuContainer />
       </>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
     </ApolloProvider>
   );
