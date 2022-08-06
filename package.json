@@ -19,8 +19,9 @@
   "dependencies": {
     "@apollo/react-hooks": "^4.0.0",
     "@chakra-ui/core": "^0.8.0",
-    "apollo": "^2.34.0",
+    "apollo": "^2.11.1",
     "apollo-server": "^3.10.0",
+    "bootstrap": "^3.4.1",
     "chakra-ui": "^0.3.9",
     "graphql": "^16.5.0",
     "react-bootstrap": "^2.5.0",
