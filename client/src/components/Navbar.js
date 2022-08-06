@@ -5,38 +5,38 @@ function Navbar({ currentPage, handlePageChange }) {
     <ul className="nav nav-bar">
       <li className="nav-item">
         <a
-          href="#menu"
-          onClick={() => handlePageChange('Menu')}
-          className={currentPage === 'Menu' ? 'nav-link active' : 'nav-link'}
+          href="#liquer"
+          onClick={() => handlePageChange('Liquer')}
+          className={currentPage === 'Liquer' ? 'nav-link active' : 'nav-link'}
         >
-          Menu
+          Liquer
         </a>
       </li>
       <li className="nav-item">
         <a
-          href="#order"
-          onClick={() => handlePageChange('Order')}
-          className={currentPage === 'Order' ? 'nav-link active' : 'nav-link'}
+          href="#Beer"
+          onClick={() => handlePageChange('Beer')}
+          className={currentPage === 'Beer' ? 'nav-link active' : 'nav-link'}
         >
-          Order
+          Beer
         </a>
       </li>
       <li className="nav-item">
         <a
-          href="#signup"
-          onClick={() => handlePageChange('Signup')}
-          className={currentPage === 'Signin' ? 'nav-link active' : 'nav-link'}
+          href="#NonAlcoholic"
+          onClick={() => handlePageChange('NonAlcoholic')}
+          className={currentPage === 'NonAlcoholic' ? 'nav-link active' : 'nav-link'}
         >
-          Signup
+          NonAlcoholic
         </a>
       </li>
       <li className="nav-item">
         <a
-          href="#home"
-          onClick={() => handlePageChange('Home')}
-          className={currentPage === 'Home' ? 'nav-link Home' : 'nav-link'}
+          href="#loginform"
+          onClick={() => handlePageChange('LoginForm')}
+          className={currentPage === 'LoginForm' ? 'nav-link LoginForm' : 'nav-link'}
         >
-          Home
+         Login!
         </a>
       </li>
     </ul>

@@ -5,6 +5,10 @@ import Menu from '../pages/Menu';
 import Signup from '../pages/Signup';
 import Order from '../pages/Order';
 import History from '../pages/History';
+import LoginForm from '../pages/LoginForm';
+import Beer from '../pages/Beer'
+import Liquer from '../pages/Liquer'
+import NonAlcoholic from '../pages/Nonalcoholic';
 
 import Header from "./Header";
 import Footer from "./Footer";
@@ -17,18 +21,18 @@ export default function PortfolioContainer() {
     if (currentPage === 'Home') {
         return <Home />;
       }
-    if (currentPage === 'Menu') {
-      return <Menu />;
+    if (currentPage === 'Liquer') {
+      return <Liquer />;
     }
-    if (currentPage === 'Signup') {
-      return <Signup />;
+    if (currentPage === 'Beer') {
+      return <Beer />;
     }
-    if (currentPage === 'Order') {
-      return <Order />;
+    if (currentPage === 'NonAlcoholic') {
+      return <NonAlcoholic />;
     }
-    if (currentPage === 'History') {
-      return <History />;
-    }
+    if (currentPage === 'LoginForm') {
+        return <LoginForm />;
+      }
     return <Home />;
   };
 
@@ -36,10 +40,10 @@ export default function PortfolioContainer() {
 
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
       {renderPage()}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
