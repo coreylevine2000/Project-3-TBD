@@ -13,7 +13,8 @@
   "author": "Laura Antunez, Corey Levine, Oscar Salgado, Molly Gove",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^5.1.0"
+    "concurrently": "^5.1.0",
+    "eslint": "^8.21.0"
   },
   "dependencies": {
     "apollo-server": "^3.10.0",
