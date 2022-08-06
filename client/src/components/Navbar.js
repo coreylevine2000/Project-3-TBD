@@ -9,7 +9,7 @@ function Navbar({ currentPage, handlePageChange }) {
           onClick={() => handlePageChange('Menu')}
           className={currentPage === 'Menu' ? 'nav-link active' : 'nav-link'}
         >
-          Menu better get a drink
+          MENU
         </a>
       </li>
       <li className="nav-item">
@@ -18,7 +18,7 @@ function Navbar({ currentPage, handlePageChange }) {
           onClick={() => handlePageChange('Order')}
           className={currentPage === 'Order' ? 'nav-link active' : 'nav-link'}
         >
-          Order Yo Sheet
+          Your Order
         </a>
       </li>
       <li className="nav-item">
@@ -27,7 +27,7 @@ function Navbar({ currentPage, handlePageChange }) {
           onClick={() => handlePageChange('Signup')}
           className={currentPage === 'Signin' ? 'nav-link active' : 'nav-link'}
         >
-          Signup for this
+          Signup
         </a>
       </li>
       <li className="nav-item">
@@ -36,7 +36,7 @@ function Navbar({ currentPage, handlePageChange }) {
           onClick={() => handlePageChange('Home')}
           className={currentPage === 'Home' ? 'nav-link Home' : 'nav-link'}
         >
-          Home -E
+          Home
         </a>
       </li>
       <li className="nav-item">
@@ -45,7 +45,7 @@ function Navbar({ currentPage, handlePageChange }) {
           onClick={() => handlePageChange('History')}
           className={currentPage === 'Home' ? 'nav-link History' : 'nav-link'}
         >
-          Your previous solutions
+          Past Orders
         </a>
       </li>
       <li className="nav-item">
@@ -54,7 +54,7 @@ function Navbar({ currentPage, handlePageChange }) {
           onClick={() => handlePageChange('LoginForm')}
           className={currentPage === 'LoginForm' ? 'nav-link LoginForm' : 'nav-link'}
         >
-         One of us, One of us!
+         Login
         </a>
       </li>
     </ul>
