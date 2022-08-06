@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 // import { useMutation } from '@apollo/react-hooks';
 import { LOGIN } from "../utils/mutations"
 import Auth from "../utils/auth";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Container, Row, Col, Form, Card, Jumbotron } from 'react-bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import { Button, Container, Row, Col, Form, Card, Jumbotron } from 'react-bootstrap';
 
 function LoginStrap(props) {
   const [formState, setFormState] = useState({ email: '', password: '' })
@@ -31,7 +31,7 @@ function LoginStrap(props) {
   };
 
   return (
-    <Jumbotron style={{ backgroundColor: 'transparent' , minHeight:'100vh' }} fluid>
+    <Jumbotron>
       <Container>
         <Row className="justify-content-md-center">
 
