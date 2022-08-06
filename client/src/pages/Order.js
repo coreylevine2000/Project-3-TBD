@@ -1,17 +1,15 @@
 import React, { useEffect } from 'react';
-import { Stack, Box } from '@chakra-ui/core';
+// import { Stack, Box } from '@chakra-ui/core';
 import Auth from "../utils/auth";
-import CartItem from '../components/CartItem';
+// import CartItem from '../components/CartItem';
 import { useStoreContext } from "../utils/GlobalState.js";
 import { ADD_MULTIPLE_TO_CART } from "../utils/actions";
 import { idbPromise } from "../utils/helpers";
-import { loadStripe } from "@stripe/stripe-js";
+// import { loadStripe } from "@stripe/stripe-js";
 import { QUERY_CHECKOUT } from "../utils/queries"
-import { useLazyQuery } from '@apollo/react-hooks';
-import { Jumbotron, Button, Card } from 'react-bootstrap';
+// import { useLazyQuery } from '@apollo/react-hooks';
+// import { Jumbotron, Button, Card } from 'react-bootstrap';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Row, Col, Container } from 'reactstrap';
 
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 

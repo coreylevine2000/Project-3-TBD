@@ -1,11 +1,10 @@
 import React from 'react';
-import { useQuery } from '@apollo/react-hooks';
+// import { useQuery } from '@apollo/react-hooks';
 import { QUERY_USER } from "../utils/queries";
-import {  Box, Heading, Text } from '@chakra-ui/core';
+// import {  Box, Heading, Text } from '@chakra-ui/core';
 
-import { Jumbotron, Button, Container, Row, Col } from 'react-bootstrap';
-import { Card, CardText, CardImg } from 'reactstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import { Jumbotron, Button, Container, Row, Col } from 'react-bootstrap';
+// import { Card, CardText, CardImg } from 'reactstrap';
 
 function OrderList({ name, price, ...rest }) {
   return (

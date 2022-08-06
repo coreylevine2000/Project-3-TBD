@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
-import { useMutation } from '@apollo/react-hooks';
+// import { useMutation } from '@apollo/react-hooks';
 import Auth from "../utils/auth";
 import { ADD_USER } from "../utils/mutations";
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Container, Row, Col, Form, Card, Jumbotron} from 'react-bootstrap';
-
 
 function SignupStrap(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });

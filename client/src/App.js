@@ -1,7 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import {ApolloProvider} from '@apollo/react-hooks';
-import ApolloClient from 'apollo-boost';
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import {ApolloProvider} from '@apollo/react-hooks';
+// import ApolloClient from 'apollo-boost';
 
 import Home from './pages/Home';
 import Menu from './pages/Menu.js';
@@ -14,7 +14,7 @@ import Success from "./pages/Success";
 
 import Header from './components/Header'
 import Footer from './components/Footer'
-import NavStrap from './components/Nav';
+import Navbar from './components/Navbar';
 
 const client = new ApolloClient({
     request: (operation) => {
@@ -35,7 +35,7 @@ const client = new ApolloClient({
           <div>
             <StoreProvider>
                 <Header />
-                <NavStrap />
+                <Navbar />
                 <Switch>
                   <Route exact path="/" element={<Home />} />
                   <Route exact path="/menu" element={<Menu />} />
