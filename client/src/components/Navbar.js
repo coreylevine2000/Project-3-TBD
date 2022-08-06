@@ -23,11 +23,11 @@ function Navbar({ currentPage, handlePageChange }) {
       </li>
       <li className="nav-item">
         <a
-          href="#non-alcoholic"
-          onClick={() => handlePageChange('Non-Alcoholic')}
-          className={currentPage === 'Non-Alcoholic' ? 'nav-link active' : 'nav-link'}
+          href="#NonAlcoholic"
+          onClick={() => handlePageChange('NonAlcoholic')}
+          className={currentPage === 'NonAlcoholic' ? 'nav-link active' : 'nav-link'}
         >
-          Non-Alcoholic
+          NonAlcoholic
         </a>
       </li>
       <li className="nav-item">

@@ -86,6 +86,7 @@ const LoginForm = () => {
         </Button>
       </Form> */}
       <p>One of us, ONE OF US</p>
+      <p>Login Forms // Signup Forms</p>
     </>
   );
 };
