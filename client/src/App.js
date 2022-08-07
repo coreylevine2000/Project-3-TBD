@@ -14,7 +14,7 @@ import Login from './pages/Login';
 import SingleThought from './pages/Menu';
 import Profile from './pages/MyDrinks';
 import Header from './components/Header';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
