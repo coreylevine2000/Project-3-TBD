@@ -1,3 +1,21 @@
 Button {
   display:block;
 }
+
+
+.drinkCard{
+  height: 300px;
+  width: auto;
+  display: inline-block;
+  margin: 10px;
+
+}
+
+.drinkCard img {
+  width: 200px;
+  height: auto;
+}
+
+.work-card:hover {
+  border: 1px solid black;
+}

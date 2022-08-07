@@ -1,7 +1,7 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import Margarita from '../../images/margarita.jpg'
 import OldFashion from '../../images/oldfashion.jpg'
+
+// TO DO: MAKE MORE VARIABLES FOR THE IMAGE USING THE ABOVE FORMAT
 
 
 
@@ -86,34 +86,24 @@ const drinks = [
   //     price: 9.25,
   //     quantity: 1
   // },
+  
 ]
+
+
 
 export default function DrinkCard() {
   return (
     <section className="flex-container" id="work">
-        <h2>Portfolio</h2>
-      <section className="content-section" id="work-card-container">
+      {/* <section className="content-section" id="work-card-container"> */}
         {drinks.map((drink, index) => (
-          <div
-            className={
-              index === 0 ? "work-card big-card" : "work-card small-card"
-            }
-          >
-         
+          <div className="drinkCard" id="word-card-container" >
               <h3>{drink.name}</h3>
               <img src={drink.image}  />
               <p>{drink.price}</p>
             
-            {/* <a
-              className="repo-link"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <h4>Repo Link</h4>
-            </a> */}
+       
           </div>
         ))}
       </section>
-    </section>
   );
 }
