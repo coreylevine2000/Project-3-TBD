@@ -1,32 +1,19 @@
 {
-  "name": "project-3-tbd",
+  "name": "programming-thoughts",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "node server/server.js --ignore client",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
     "build": "cd client && npm run build"
   },
   "keywords": [],
-  "author": "Laura Antunez, Corey Levine, Oscar Salgado, Molly Gove",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^5.1.0",
-    "eslint": "^8.21.0"
-  },
-  "dependencies": {
-    "@apollo/react-hooks": "^4.0.0",
-    "@chakra-ui/core": "^0.8.0",
-    "apollo": "^2.11.1",
-    "apollo-server": "^3.10.0",
-    "bootstrap": "^3.4.1",
-    "chakra-ui": "^0.3.9",
-    "graphql": "^16.5.0",
-    "react-bootstrap": "^2.5.0",
-    "react-hooks": "^1.0.1",
-    "react-router-dom": "^6.3.0",
-    "reactstrap": "^9.1.3"
+    "concurrently": "^5.1.0"
   }
 }
