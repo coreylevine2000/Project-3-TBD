@@ -4,13 +4,13 @@ const { Schema } = mongoose;
 const optionsSchema = new Schema (
     {
         name: {
-            type: string,
+            type: String,
             required: true,
             trim: true
         }
     }
-)
+);
 
-const Options = model("Options", optionsSchema);
+const Options = model('Options', optionsSchema);
 
 module.exports = Options;
