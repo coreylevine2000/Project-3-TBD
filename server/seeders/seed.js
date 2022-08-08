@@ -1,7 +1,5 @@
 const db = require('../config/connection');
 const { User, Drink, Options } = require('../models');
-import Margarita from '../../images/margarita.jpg'
-import OldFashion from '../../images/oldfashion.jpg'
 
 
 db.once('open', async () => {
@@ -20,7 +18,7 @@ db.once('open', async () => {
       {
         name: "Margarita",
         description: "A classic lime cocktail with lime juice, tequila and agave syrup.",
-        image: Margarita,
+        image: '../../client/src/images/margarita.jpg',
         option: options[0]._id,
         price: 7.50,
         quantity: 1
@@ -28,7 +26,7 @@ db.once('open', async () => {
     {
         name: 'Old Fashion',
         description: 'Oldy but goldy drink Traditionally made with bourbon or rye whiskey, lightly sweetened with sugar and aromatised with bitters.',
-        image: OldFashion,
+        image: '../../client/src/images/oldfashion.jpg',
         category: options[0]._id,
         price: 9.50,
         quantity: 1
@@ -110,7 +108,7 @@ db.once('open', async () => {
       password: 'Test12345',
       orders: [
         {
-          drinks: [drinks[0]._id]
+          drinks: [drinks[2]._id, drinks[1]._id]
         }
       ]
     });

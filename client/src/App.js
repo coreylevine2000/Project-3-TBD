@@ -14,6 +14,7 @@ import Login from './pages/Login';
 import SingleThought from './pages/Menu';
 import Profile from './pages/MyDrinks';
 import Header from './components/Header';
+import Checkout from './components/Checkout'
 // import Footer from './components/Footer';
 
 // Construct our main GraphQL API endpoint
@@ -61,8 +62,8 @@ function App() {
                 element={<Signup />}
               />
               <Route 
-                path="/me" 
-                element={<Profile />}
+                path="/myorder" 
+                element={<Checkout />}
               />
               <Route 
                 path="/profiles/:username" 

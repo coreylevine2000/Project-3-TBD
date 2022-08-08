@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const drinkSchema = require('./Drink.js')
+const drinkSchema = require('./Drink.js');
 
 
 const orderSchema = new Schema({
@@ -11,7 +11,7 @@ const orderSchema = new Schema({
         default: Date.now
     },
     drinks: [drinkSchema]
-})
+});
 
 const Order = model('Order', orderSchema);
 
