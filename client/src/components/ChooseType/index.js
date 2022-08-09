@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
-const ChooseType = () => {
+var ChooseType = () => {
   return (
     <>
       <ButtonGroup size="lg" className="mb-2">
