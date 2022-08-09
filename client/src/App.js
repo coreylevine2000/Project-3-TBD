@@ -12,7 +12,7 @@ import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import SingleThought from './pages/Menu';
-import Profile from './pages/MyDrinks';
+import MyDrinks from './pages/MyDrinks';
 import Header from './components/Header';
 import Checkout from './components/Checkout'
 // import Footer from './components/Footer';
@@ -63,16 +63,16 @@ function App() {
               />
               <Route 
                 path="/myorder" 
-                element={<Checkout />}
+                element={<MyDrinks />}
               />
               <Route 
-                path="/profiles/:username" 
-                element={<Profile />}
+                path="/menu" 
+                element={<Menu />}
               />
-              <Route 
-                path="/thoughts/:thoughtId" 
-                element={<SingleThought />}
-              />
+              {/* <Route 
+                path="/checkout" 
+                element={<Chech />}
+              /> */}
             </Routes>
           </div>
         </div>
