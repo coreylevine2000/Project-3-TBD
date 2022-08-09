@@ -1,11 +1,17 @@
 
+import LiquorCard from '../components/DrinkCard';
+import DrinkCard from '../components/DrinkCard';
 
 
 const Liquor = () => {
-  
+
+
     return (
-      <main>
-      </main>
+
+      <section>
+        <LiquorCard/>
+       </section>
+
     );
   };
 

@@ -1,35 +1,36 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Margarita from '../../images/margarita.jpg'
-import OldFashion from '../../images/oldfashion.jpg'
+import Margarita from '../../images/margarita.jpg';
+import OldFashion from '../../images/oldfashion.jpg';
+import Martini from '../../images/martini.jpg';
 
 
 
 const drinks = [
+  // {
+  //     name: 'Margarita',
+  //     description: 'A classic lime cocktail with lime juice, tequila and agave syrup.',
+  //     image: Margarita,
+  //     // category: categories[0]._id,
+  //     price: 7.50,
+  //     quantity: 1
+  // },
   {
-      name: 'Margarita',
-      description: 'A classic lime cocktail with lime juice, tequila and agave syrup.',
-      image: Margarita,
+      name: 'Old Fashion',
+      description: 'Oldy but goldy drink Traditionally made with bourbon or rye whiskey, lightly sweetened with sugar and aromatised with bitters.',
+      image: OldFashion,
       // category: categories[0]._id,
-      price: 7.50,
+      price: 9.50,
       quantity: 1
   },
-  // {
-  //     name: 'Old Fashion',
-  //     description: 'Oldy but goldy drink Traditionally made with bourbon or rye whiskey, lightly sweetened with sugar and aromatised with bitters.',
-  //     image: OldFashion,
-  //     // category: categories[0]._id,
-  //     price: 9.50,
-  //     quantity: 1
-  // },
-  // {
-  //     name: 'Martini',
-  //     description: 'a cocktail made with gin and vermouth, and garnished with an olive or a lemon twist.',
-  //     image: 'client/public/Images/martini.jpg',
-  //     // category: categories[0]._id,
-  //     price: 8.75,
-  //     quantity: 1
-  // },
+  {
+      name: 'Martini',
+      description: 'a cocktail made with gin and vermouth, and garnished with an olive or a lemon twist.',
+      image: 'client/public/Images/martini.jpg',
+      // category: categories[0]._id,
+      price: 8.75,
+      quantity: 1
+  },
   // {
   //     name: 'Long Island Ice Tea',
   //     description: 'Cocktail made with vodka, tequila, light rum, triple sec, gin, and a splash of cola, which gives the drink the same hue as iced tea.',
@@ -91,7 +92,6 @@ const drinks = [
 export default function DrinkCard() {
   return (
     <section className="flex-container" id="work">
-        <h2>Portfolio</h2>
       <section className="content-section" id="work-card-container">
         {drinks.map((drink, index) => (
           <div
@@ -99,9 +99,9 @@ export default function DrinkCard() {
               index === 0 ? "work-card big-card" : "work-card small-card"
             }
           >
-         
               <h3>{drink.name}</h3>
               <img src={drink.image}  />
+              <p>{drink.description}</p>
               <p>{drink.price}</p>
             
             {/* <a

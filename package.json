@@ -17,6 +17,7 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
-    "heroku": "^7.62.0"
+    "heroku": "^7.62.0",
+    "mongoose": "^6.5.1"
   }
 }
