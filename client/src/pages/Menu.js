@@ -1,58 +1,55 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useQuery } from '@apollo/react-hooks';
 
-// Import the `useParams()` hook
-import { useParams } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
+import { ThemeProvider, Flex, Box, Grid} from '@chakra-ui/core';
+import theme  from '../theme/theme';
 
-import CommentList from '../components/DrinkCard';
-import CommentForm from '../components/DrinkList';
+import CategoryMenu from "../components/CategoryMenu";
+import DrinkList from "../components/DrinkList";
+//import DrinkCard from '../components/DrinkCard';
+import { QUERY_ALL_DRINKS } from '../utils/queries';
+import { useStoreContext } from "../utils/GlobalState";
+import { UPDATE_DRINKS } from "../utils/actions";
+import { idbPromise } from "../utils/helpers";
 
-import { QUERY_SINGLE_THOUGHT } from '../utils/queries';
+const Menu = () => {
+    const [state, dispatch] = useStoreContext();
+    const { loading, data } = useQuery(QUERY_ALL_DRINKS);
+console.log("state", state);
+    useEffect(() => {
+        if (data) {
+            dispatch({
+                type: UPDATE_DRINKS,
+                drinks: data.drinks
+            });
 
-const SingleThought = () => {
-  // Use `useParams()` to retrieve value of the route parameter `:profileId`
-  const { thoughtId } = useParams();
+            data.drinks.forEach((item) => {
+                idbPromise('drinks', 'put', item);
+            });
+        } else if (!loading) {
+            idbPromise('drinks', 'get').then((drinks) => {
+                dispatch({
+                    type: UPDATE_DRINKS, 
+                    drinks: drinks
+                })
+            })
+        }
+    }, [loading, data, dispatch]);
 
-  const { loading, data } = useQuery(QUERY_SINGLE_THOUGHT, {
-    // pass URL parameter
-    variables: { thoughtId: thoughtId },
-  });
-
-  const thought = data?.thought || {};
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-  return (
-    <div className="my-3">
-      <h3 className="card-header bg-dark text-light p-2 m-0">
-        {thought.thoughtAuthor} <br />
-        <span style={{ fontSize: '1rem' }}>
-          had this thought on {thought.createdAt}
-        </span>
-      </h3>
-      <div className="bg-light py-4">
-        <blockquote
-          className="p-4"
-          style={{
-            fontSize: '1.5rem',
-            fontStyle: 'italic',
-            border: '2px dotted #1a1a1a',
-            lineHeight: '1.5',
-          }}
-        >
-          {thought.thoughtText}
-        </blockquote>
-      </div>
-
-      <div className="my-5">
-        <CommentList comments={thought.comments} />
-      </div>
-      <div className="m-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
-        <CommentForm thoughtId={thought._id} />
-      </div>
-    </div>
-  );
+    return (
+        <ThemeProvider theme={theme}>
+            <Flex wrap="wrap" alignItems='center' justifyContent='center'>
+                <Box>
+                    <Box p={5} alignItems='center' justifyContent='center'>
+                        <CategoryMenu />
+                    </Box>
+                    <DrinkList drinks={state.drinks}/>
+                </Box>
+            </Flex>
+            
+        </ThemeProvider>
+    );
 };
 
-export default SingleThought;
+
+export default Menu;

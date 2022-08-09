@@ -1,16 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
+import { REMOVE_FROM_CART } from '../../utils/actions';
+import { useSToreContext } from '../../utilsGlobalState'; 
+import { idbPromise } from '../../utils/helpers';
 
-import { ADD_THOUGHT } from '../../utils/mutations';
-import { QUERY_THOUGHTS, QUERY_ME } from '../../utils/queries';
 
-import Auth from '../../utils/auth';
-
-const Checkout = () => {
+const Checkout = ( {item }) => {
   const [thoughtText, setThoughtText] = useState('');
 
-  const [characterCount, setCharacterCount] = useState(0);
 
   const [addThought, { error }] = useMutation(ADD_THOUGHT, {
     update(cache, { data: { addThought } }) {

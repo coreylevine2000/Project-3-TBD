@@ -1,35 +1,28 @@
 import React from 'react';
-import { useQuery } from '@apollo/client';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import { Jumbotron, Button, Container, Row, Col, Image } from 'react-bootstrap';
 
-import DrinkCard from '../components/DrinkCard';
-import ChooseType from '../components/ChooseType';
 
-import { QUERY_THOUGHTS } from '../utils/queries';
+function HomeStrap(props) {
 
-const Home = () => {
-  const { loading, data } = useQuery(QUERY_THOUGHTS);
-  const thoughts = data?.thoughts || [];
+    return (
+        <Jumbotron style={{backgroundColor:'transparent'}} fluid>
+            <Container>
+                <Row>
+                    <Col className='text-center'>
+                        <Image src="./images/cover.jpg" alt="coffee banner" fluid />
+                        <h1 className='mt-4'>Sleepy?</h1>
+                        <h2>{"Why not take a <br> for Java?"}<br></br>Order from our delicious menu</h2>
+                        <Button className='mt-4' variant='secondary' href='/menu' size='lg'>
+                            Order Now
+                        </Button>
+                    </Col>
+                </Row>
 
-  return (
-    <main>
+            </Container>
+        </Jumbotron>
 
-      <div className="flex-row justify-center">
-      <ChooseType />
-      <DrinkCard/>
-{/*   
-        <div className="col-12 col-md-8 mb-3">
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <DrinkList
-              thoughts={thoughts}
-              title="Some Feed for Thought(s)..."
-            />
-          )}
-        </div> */}
-      </div>
-    </main>
-  );
-};
+    )
+}
 
-export default Home;
+export default HomeStrap;
