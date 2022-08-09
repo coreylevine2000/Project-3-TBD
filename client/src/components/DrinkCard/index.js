@@ -14,14 +14,14 @@ const drinks = [
       price: 7.50,
       quantity: 1
   },
-  {
-      name: 'Old Fashion',
-      description: 'Oldy but goldy drink Traditionally made with bourbon or rye whiskey, lightly sweetened with sugar and aromatised with bitters.',
-      image: OldFashion,
-      // category: categories[0]._id,
-      price: 9.50,
-      quantity: 1
-  },
+  // {
+  //     name: 'Old Fashion',
+  //     description: 'Oldy but goldy drink Traditionally made with bourbon or rye whiskey, lightly sweetened with sugar and aromatised with bitters.',
+  //     image: OldFashion,
+  //     // category: categories[0]._id,
+  //     price: 9.50,
+  //     quantity: 1
+  // },
   // {
   //     name: 'Martini',
   //     description: 'a cocktail made with gin and vermouth, and garnished with an olive or a lemon twist.',
