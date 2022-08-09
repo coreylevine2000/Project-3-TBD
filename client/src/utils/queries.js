@@ -68,9 +68,6 @@ export const QUERY_OPTIONS = gql`
     options {
       _id
       name
-
+    }
   }
-  }
-
-
 `;

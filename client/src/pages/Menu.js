@@ -7,19 +7,19 @@ import theme  from '../theme/theme';
 import CategoryMenu from "../components/CategoryMenu";
 import DrinkList from "../components/DrinkList";
 //import DrinkCard from '../components/DrinkCard';
-import { QUERY_ALL_DRINKS } from '../utils/queries';
+import { QUERY_DRINKS } from '../utils/queries';
 import { useStoreContext } from "../utils/GlobalState";
-import { UPDATE_DRINKS } from "../utils/actions";
+import { UPDATE_SINGLE_DRINK } from "../utils/actions";
 import { idbPromise } from "../utils/helpers";
 
 const Menu = () => {
     const [state, dispatch] = useStoreContext();
-    const { loading, data } = useQuery(QUERY_ALL_DRINKS);
+    const { loading, data } = useQuery(QUERY_DRINKS);
 console.log("state", state);
     useEffect(() => {
         if (data) {
             dispatch({
-                type: UPDATE_DRINKS,
+                type: UPDATE_SINGLE_DRINK,
                 drinks: data.drinks
             });
 
@@ -29,7 +29,7 @@ console.log("state", state);
         } else if (!loading) {
             idbPromise('drinks', 'get').then((drinks) => {
                 dispatch({
-                    type: UPDATE_DRINKS, 
+                    type: UPDATE_SINGLE_DRINK, 
                     drinks: drinks
                 })
             })
