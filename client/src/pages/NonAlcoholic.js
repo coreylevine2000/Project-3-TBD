@@ -1,11 +1,11 @@
-
+import NonAlcoholicCard from "../components/NonAlcoholicCard";
 
 
 const NonAlcoholic = () => {
   
     return (
       <main>
-         <NonAlcoholic />
+         <NonAlcoholicCard />
       </main>
     );
   };

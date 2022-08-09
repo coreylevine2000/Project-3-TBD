@@ -7,14 +7,14 @@ import Martini from '../../images/martini.jpg';
 
 
 const drinks = [
-  // {
-  //     name: 'Margarita',
-  //     description: 'A classic lime cocktail with lime juice, tequila and agave syrup.',
-  //     image: Margarita,
-  //     // category: categories[0]._id,
-  //     price: 7.50,
-  //     quantity: 1
-  // },
+  {
+      name: 'Margarita',
+      description: 'A classic lime cocktail with lime juice, tequila and agave syrup.',
+      image: Margarita,
+      // category: categories[0]._id,
+      price: 7.50,
+      quantity: 1
+  },
   {
       name: 'Old Fashion',
       description: 'Oldy but goldy drink Traditionally made with bourbon or rye whiskey, lightly sweetened with sugar and aromatised with bitters.',

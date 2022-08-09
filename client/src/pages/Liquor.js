@@ -1,6 +1,5 @@
 
 import LiquorCard from '../components/DrinkCard';
-import DrinkCard from '../components/DrinkCard';
 
 
 const Liquor = () => {

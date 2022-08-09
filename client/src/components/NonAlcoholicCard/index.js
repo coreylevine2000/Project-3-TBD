@@ -1,21 +1,18 @@
-
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 import Margarita from '../../images/margarita.jpg';
+import OldFashion from '../../images/oldfashion.jpg';
+import Martini from '../../images/martini.jpg';
+
+
 
 const drinks = [
   {
-      name: 'Margarita',
-      description: 'A classic lime cocktail with lime juice, tequila and agave syrup.',
-      image: Margarita,
-      // category: categories[0]._id,
-      price: 7.50,
-      quantity: 1
-  },
-  {
-    name: 'Margarita',
-    description: 'A classic lime cocktail with lime juice, tequila and agave syrup.',
-    image: Margarita,
+    name: 'Old Fashion',
+    description: 'Oldy but goldy drink Traditionally made with bourbon or rye whiskey, lightly sweetened with sugar and aromatised with bitters.',
+    image: OldFashion,
     // category: categories[0]._id,
-    price: 7.50,
+    price: 9.50,
     quantity: 1
 },
 ]
@@ -35,9 +32,15 @@ export default function DrinkCard() {
               <p>{drink.description}</p>
               <p>{drink.price}</p>
             
+            {/* <a
+              className="repo-link"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <h4>Repo Link</h4>
+            </a> */}
           </div>
         ))}
-
       </section>
     </section>
   );
