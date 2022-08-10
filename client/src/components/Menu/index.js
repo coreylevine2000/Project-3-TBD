@@ -4,17 +4,17 @@ import { useQuery } from '@apollo/react-hooks';
 // import { ThemeProvider, Flex, Box, Grid} from '@chakra-ui/core';
 // import theme  from '../theme/theme';
 
-import CategoryMenu from "./Menu";
-import DrinkList from "./DrinkList";
+import CategoryMenu from "../../pages/Menu";
+import DrinkList from "../DrinkList";
 //import DrinkCard from '../components/DrinkCard';
-import { QUERY_ALL_DRINKS } from '../utils/queries';
-import { useStoreContext } from "../utils/GlobalState";
-import { UPDATE_DRINKS } from "../utils/actions";
-import { idbPromise } from "../utils/helpers";
+import { QUERY_DRINKS } from '../../utils/queries';
+import { useStoreContext } from "../../utils/GlobalState";
+import { UPDATE_DRINKS } from "../../utils/actions";
+import { idbPromise } from "../../utils/helpers";
 
 const Menu = () => {
     const [state, dispatch] = useStoreContext();
-    const { loading, data } = useQuery(QUERY_ALL_DRINKS);
+    const { loading, data } = useQuery(QUERY_DRINKS);
 console.log("state", state);
     useEffect(() => {
         if (data) {
@@ -37,17 +37,9 @@ console.log("state", state);
     }, [loading, data, dispatch]);
 
     return (
-        <ThemeProvider theme={theme}>
-            <Flex wrap="wrap" alignItems='center' justifyContent='center'>
-                <Box>
-                    <Box p={5} alignItems='center' justifyContent='center'>
-                        <CategoryMenu />
-                    </Box>
-                    <DrinkList drinks={state.drinks}/>
-                </Box>
-            </Flex>
-            
-        </ThemeProvider>
+     <section>
+      <h2>test</h2>
+     </section>
     );
 };
 
