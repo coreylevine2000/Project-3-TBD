@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const { Schema } = mongoose;
+const { Schema, model } = mongoose;
 
 const optionsSchema = new Schema (
     {
         name: {
-            type: string,
+            type: String,
             required: true,
             trim: true
         }
