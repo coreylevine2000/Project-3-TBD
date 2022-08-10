@@ -1,54 +1,47 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useQuery } from '@apollo/react-hooks';
 
-const ThoughtList = ({
-  thoughts,
-  title,
-  showTitle = true,
-  showUsername = true,
-}) => {
-  if (!thoughts.length) {
-    return <h3>No Thoughts Yet</h3>;
-  }
+// import { ThemeProvider, Flex, Box, Grid} from '@chakra-ui/core';
+// import theme  from '../theme/theme';
 
-  return (
-    <div>
-      {showTitle && <h3>{title}</h3>}
-      {thoughts &&
-        thoughts.map((thought) => (
-          <div key={thought._id} className="card mb-3">
-            <h4 className="card-header bg-primary text-light p-2 m-0">
-              {showUsername ? (
-                <Link
-                  className="text-light"
-                  to={`/profiles/${thought.thoughtAuthor}`}
-                >
-                  {thought.thoughtAuthor} <br />
-                  <span style={{ fontSize: '1rem' }}>
-                    had this thought on {thought.createdAt}
-                  </span>
-                </Link>
-              ) : (
-                <>
-                  <span style={{ fontSize: '1rem' }}>
-                    You had this thought on {thought.createdAt}
-                  </span>
-                </>
-              )}
-            </h4>
-            <div className="card-body bg-light p-2">
-              <p>{thought.thoughtText}</p>
-            </div>
-            <Link
-              className="btn btn-primary btn-block btn-squared"
-              to={`/thoughts/${thought._id}`}
-            >
-              Join the discussion on this thought.
-            </Link>
-          </div>
-        ))}
-    </div>
-  );
+import CategoryMenu from "../../pages/Menu";
+import DrinkList from "../DrinkList";
+//import DrinkCard from '../components/DrinkCard';
+import { QUERY_DRINKS } from '../../utils/queries';
+import { useStoreContext } from "../../utils/GlobalState";
+import { UPDATE_DRINKS } from "../../utils/actions";
+import { idbPromise } from "../../utils/helpers";
+
+const Menu = () => {
+    const [state, dispatch] = useStoreContext();
+    const { loading, data } = useQuery(QUERY_DRINKS);
+console.log("state", state);
+    useEffect(() => {
+        if (data) {
+            dispatch({
+                type: UPDATE_DRINKS,
+                drinks: data.drinks
+            });
+
+            data.drinks.forEach((item) => {
+                idbPromise('drinks', 'put', item);
+            });
+        } else if (!loading) {
+            idbPromise('drinks', 'get').then((drinks) => {
+                dispatch({
+                    type: UPDATE_DRINKS, 
+                    drinks: drinks
+                })
+            })
+        }
+    }, [loading, data, dispatch]);
+
+    return (
+     <section>
+      <h2>test</h2>
+     </section>
+    );
 };
 
-export default ThoughtList;
+
+export default Menu;

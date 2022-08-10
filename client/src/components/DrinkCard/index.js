@@ -1,5 +1,4 @@
-// import Margarita from '../../images/margarita.jpg'
-// import OldFashion from '../../images/oldfashion.jpg'
+
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
@@ -14,14 +13,13 @@ function DrinkCard(props) {
   const{drink} = props
   return (
     <Card style={{ width: '18rem' }}>
-      {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
+      <Card.Img variant="top" src={drink.image} />
       <Card.Body>
         <Card.Title>{drink.name}</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          {drink.description}
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary">Purchase {drink.name}</Button>
       </Card.Body>
     </Card>
   );
