@@ -1,66 +1,74 @@
-import React from 'react';
-import { Navigate, useParams } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
+import React, { useEffect } from 'react';
+// import { Stack, Box } from '@chakra-ui/core';
+import Auth from "../utils/auth";
+import Checkout from '../components/Checkout';
+import { useStoreContext } from "../utils/GlobalState.js";
+import { ADD_MULTIPLE_TO_CHECKOUT } from "../utils/actions";
+import { idbPromise } from "../utils/helpers";
+// import { loadStripe } from "@stripe/stripe-js";
+import { QUERY_CHECKOUT } from "../utils/queries"
+import { useLazyQuery } from '@apollo/react-hooks';
+// import { Jumbotron, Button, Card } from 'react-bootstrap';
 
-import ThoughtForm from '../components/Checkout';
-import ThoughtList from '../components/Menu';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import { Row, Col, Container } from 'reactstrap';
 
-import { QUERY_USER, QUERY_ME } from '../utils/queries';
+// const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
-import Auth from '../utils/auth';
+const MyDrinks = () => {
+  const [state, dispatch] = useStoreContext();
+  const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
+  console.log(state);
+  useEffect(() => {
+    async function getCheckout() {
+      const checkout = await idbPromise('checkout', 'get');
+      dispatch({ type: ADD_MULTIPLE_TO_CHECKOUT, drinks: [...checkout] })
+    };
+    if (!state.checkout.length) {
+      getCheckout();
+    }
+  }, [state.checkout.length, dispatch]);
 
-const Profile = () => {
-  const { username: userParam } = useParams();
+  // useEffect(() => {
+  //   if (data) {
+  //     stripePromise.then((res) => {
+  //       res.redirectToCheckout({ sessionId: data.checkout.session })
+  //     })
+  //   }
+  // }, [data]);
 
-  const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
-    variables: { username: userParam },
-  });
-
-  const user = data?.me || data?.user || {};
-  // navigate to personal profile page if username is yours
-  if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
-    return <Navigate to="/me" />;
+  function calculateTotal() {
+    let sum = 0;
+    console.log(state.checkout);
+    state.checkout.forEach(item => {
+      console.log(item);
+      if (item.customize.size === "Large (+$1.00)") {
+        sum += 1
+      }
+      sum += item.price;
+    });
+    return sum.toFixed(2);
   }
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  function submitCheckout() {
+    const drinkIds = [];
 
-  if (!user?.username) {
-    return (
-      <h4>
-        You need to be logged in to see this. Use the navigation links above to
-        sign up or log in!
-      </h4>
-    );
+    state.checkout.forEach((item) => {
+      drinkIds.push(item._id);
+    });
+
+    getCheckout({
+      variables: { drinks: drinkIds }
+    });
   }
 
   return (
-    <div>
-      <div className="flex-row justify-center mb-3">
-        <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5">
-          Viewing {userParam ? `${user.username}'s` : 'your'} profile.
-        </h2>
 
-        <div className="col-12 col-md-10 mb-5">
-          <ThoughtList
-            thoughts={user.thoughts}
-            title={`${user.username}'s thoughts...`}
-            showTitle={false}
-            showUsername={false}
-          />
-        </div>
-        {!userParam && (
-          <div
-            className="col-12 col-md-10 mb-3 p-3"
-            style={{ border: '1px dotted #1a1a1a' }}
-          >
-            <ThoughtForm />
-          </div>
-        )}
-      </div>
-    </div>
+ <section>  
+  <h2>I'm scared</h2>
+ </section>
+
   );
 };
 
-export default Profile;
+export default MyDrinks;
