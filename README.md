@@ -1,4 +1,4 @@
-# Ready, Set. Drink
+# Ready, Drink, GO!
 
 # DESCRIPTION
 
