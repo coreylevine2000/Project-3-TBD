@@ -1,6 +1,8 @@
-const Schema = require('mongoose');
+const mongoose = require('mongoose');
 
-const optionsSchema = require('./Options')
+const { Schema } = mongoose;
+
+const optionsSchema = require('./Options').schema
 
 const drinkSchema = new Schema({
     name: {
@@ -20,7 +22,8 @@ const drinkSchema = new Schema({
     image: {
         type: String
     },
-    category: [optionsSchema]
+    option: [optionsSchema]
+
 
 })
 

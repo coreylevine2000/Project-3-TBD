@@ -41,13 +41,26 @@ function DrinkList({drinks}) {
     return state.drinks.filter(drink => drink.category._id === currentCategory);
   }
 
-  return (
-    <section>
-      <h2>
-        YO
-      </h2>
-    </section>
-  );
+  // return (
+  //   <Row >
+  //   <Box p={5}>
+  //       <h2>Pick your drink</h2>
+  //       {state.drinks.length ? (
+  //           <Grid templateColumns={["repeat(1, 1fr)","repeat(1, 1fr)","repeat(3, 1fr)","repeat(3, 1fr)"]} gap={3}>
+  //               {filterDrinks().map(drink => (
+  //                   <DrinkCard
+  //                   key= {drink._id}
+  //                   item={drink}
+  //                   />
+  //               ))}
+  //           </Grid>
+  //       ) : (
+  //           <h3>You haven't added any drinks yet!</h3>
+  //       )}
+        
+  //   </Box>
+  //   </Rpw>
+  // );
 }
 
 export default DrinkList;

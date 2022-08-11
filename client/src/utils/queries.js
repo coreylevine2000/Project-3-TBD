@@ -9,7 +9,7 @@ export const QUERY_DRINKS = gql`
       description
       price
       image
-      category {
+      option {
         _id
       }
       
@@ -33,16 +33,16 @@ export const QUERY_ALL_DRINKS = gql`
       description
       price
       image
-      category {
+      option {
         name
       }
     }
   }
 `;
 
-export const QUERY_CATEGORIES = gql`
+export const QUERY_OPTIONS = gql`
   {
-    categories {
+    options {
       _id
       name
     }
