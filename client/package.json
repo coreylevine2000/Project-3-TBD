@@ -6,6 +6,9 @@
   "dependencies": {
     "@apollo/client": "^3.5.8",
     "@apollo/react-hooks": "^4.0.0",
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@mui/material": "^5.10.0",
     "@stripe/stripe-js": "^1.35.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
