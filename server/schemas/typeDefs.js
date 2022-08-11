@@ -15,7 +15,7 @@ type Drink {
     description: String
     image: String
     price: Float
-    options: Option
+    options: Options
 
 }
 
