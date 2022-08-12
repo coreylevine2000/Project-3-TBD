@@ -23,7 +23,7 @@ You can access from your favorite browser on your computer, ipad, or mobile phon
 
 # Deployment
 
-Link to app
+Click [here](https://github.com/coreylevine2000/Project-3-TBD) to go to app! 
 Click [here](https://github.com/coreylevine2000/Project-3-TBD) to go to Github.   
 
 # Technologies
@@ -52,11 +52,11 @@ Cloud platform that lets companies deploy web applications.
 # Future Development
 
 Screenshots
-Home Page image
+![Alt text](/client/src/images/temp-home-page.jpg?raw=true "Home Page")
+
 
 Menu & Customizations image
 
-Cart image
 
 Add Payment method via stripe
 Create a points/rewards system for users.
