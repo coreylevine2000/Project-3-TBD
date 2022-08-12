@@ -6,9 +6,10 @@ Users can order menu items by adding items to their cart, modify orders, and als
 
 ## Table of Contents
 
-| [Installation] | [Usage] | [Deployment] | [Technologies] | [FutureDevelopment] | [Contributors]  |
+[Installation](https://github.com/coreylevine2000/Project-3-TBD#Installation)
+| [Usage] | [Deployment] | [Technologies] | [FutureDevelopment] | [Contributors]  |
 
-## [Installation]
+## Installation
 
 npm install in the root of the repository, then npm start
 
