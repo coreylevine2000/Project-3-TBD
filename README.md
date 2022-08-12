@@ -8,7 +8,7 @@ Users can order menu items by adding items to their cart, modify orders, and als
 
 | [Installation] | [Usage] | [Deployment] | [Technologies] | [FutureDevelopment] | [Contributors]  |
 
-## Installation
+## [Installation]
 
 npm install in the root of the repository, then npm start
 
