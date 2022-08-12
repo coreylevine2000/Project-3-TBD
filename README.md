@@ -6,7 +6,7 @@ Users can order menu items by adding items to their cart, modify orders, and als
 
 ## Table of Contents
 
-| Installation | Usage | Deployment | Technologies | Future Development | Contributors  |
+| [Installation] | [Usage] | [Deployment] | [Technologies] | [FutureDevelopment] | [Contributors]  |
 
 ## Installation
 
