@@ -19,44 +19,42 @@ npm install in the root of the repository, then npm start
 
 # Usage
 
-You can access from your favorite browser on your computer, ipad, or mobile phone. Users can view menu options on menu page. Users can add menu items to cart, modify contents of item. Users can purchase items in cart. Users can log in and save items/orders Home page with location, menu button, contact info.
+You can access from your favorite browser on your **computer, ipad, or mobile phone**. Users can view menu options on menu page. Users can add menu items to cart, modify contents of item. Users can purchase items in cart. Users can log in and save items/orders Home page with location, menu button, contact info.
 
 # Deployment
 
-Click [here](https://quiet-earth-66313.herokuapp.com) to go to the APP! 
-Click [here](https://github.com/coreylevine2000/Project-3-TBD) to go to Github.   
+* Click [here](https://quiet-earth-66313.herokuapp.com) to go to the APP!
+* Click [here](https://github.com/coreylevine2000/Project-3-TBD) to go to Github.
 
 # Technologies
 
-MongoDB
+**MongoDB**
 Is a cross-platform document-oriented database program. Classified as a NoSQL database program.
 
-Express
+**Express**
 is a back end web application framework for Node, it is designed for building web applications and APIs.
 
-React
+**React**
 React can be used as a base in the development of single-page or mobile applications.
 
-Node.js
+**Node.js**
 Is an open source, cross-platform runtime environment for developing server-side and networking applications.
 
-GraphQL
+**GraphQL**
 Is a syntax that describes how to ask for data, and is generally used to load data from a server to a client.
 
-Mongoose
+**Mongoose**
 It manages relationships between data
 
-Heroku
+**Heroku**
 Cloud platform that lets companies deploy web applications.
 
 # Future Development
 
-Screenshots
+**Screenshots**
 ![Home Page](/client/src/images/temp-home-page.png?raw=true "Home Page")
 
-
 Menu & Customizations image
-
 
 Add Payment method via stripe
 Create a points/rewards system for users.
@@ -65,4 +63,4 @@ Create a Save orders for future/order history, and a reorder button.
 
 # Contributors
 
-Laura Antunez, Molly Gove, Corey Levine, Oscar Salgado
+**Laura Antunez, Molly Gove, Corey Levine, Oscar Salgado**
