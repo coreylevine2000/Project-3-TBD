@@ -19,9 +19,9 @@ const resolvers = {
         }
         return await Drink.find(params).populate('options');
       },
-      drink: async (parent, { _id }) => {
-        return await Product.findById(_id).populate('options');
-      },
+    //   drink: async (parent, { _id }) => {
+        // return await Product.findById(_id).populate('category');
+    //   },
       order: async (parent, { _id }, context) => {
         if (context.user) {
             const user = await User.findById(context.user._id).populate({

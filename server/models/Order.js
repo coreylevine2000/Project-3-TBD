@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-const { Schema } = mongoose;
+const { Schema, model } = mongoose;
 
-const drinkSchema = require('./Drink.js')
+const drinkSchema = require('./Drink.js').schema
 
 
 const orderSchema = new Schema({

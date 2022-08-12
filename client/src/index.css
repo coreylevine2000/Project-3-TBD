@@ -14,8 +14,11 @@ Card {
 .drinkCard img {
   width: 200px;
   height: auto;
+  flex-direction: column;
+  align-items: center;
 }
 
 .work-card:hover {
   border: 1px solid black;
 }
+
