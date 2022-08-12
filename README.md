@@ -52,7 +52,7 @@ Cloud platform that lets companies deploy web applications.
 # Future Development
 
 Screenshots
-![Alt text](/client/src/images/temp-home-page.jpg?raw=true "Home Page")
+![Home Page](/client/src/images/temp-home-page.jng?raw=true "Home Page")
 
 
 Menu & Customizations image
