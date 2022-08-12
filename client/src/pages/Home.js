@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { useQuery } from '@apollo/client';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';

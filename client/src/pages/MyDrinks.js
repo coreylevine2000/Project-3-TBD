@@ -24,10 +24,10 @@ const MyDrinks = () => {
       const checkout = await idbPromise('checkout', 'get');
       dispatch({ type: ADD_MULTIPLE_TO_CHECKOUT, drinks: [...checkout] })
     };
-    if (!state.checkout.length) {
-      getCheckout();
-    }
-  }, [state.checkout.length, dispatch]);
+    // if (!state.checkout.length) {
+    //   getCheckout();
+    // }
+  }, [state.checkout, dispatch]);
 
   // useEffect(() => {
   //   if (data) {

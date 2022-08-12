@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-const { Schema } = mongoose;
+const { Schema, model } = mongoose;
 
-const optionsSchema = require('./Options').schema
+const optionsSchema = require('./Options')
 
 const drinkSchema = new Schema({
     name: {
@@ -22,11 +22,13 @@ const drinkSchema = new Schema({
     image: {
         type: String
     },
-    option: [optionsSchema]
+    options: { type: [optionsSchema.schema], required: true },
+        // ref: 'Options'
+    
 
 
 })
 
-const Drink = model('Drink', drinkSchema)
+const Drink = mongoose.model('Drink', drinkSchema)
 
 module.exports = Drink;

@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-const { Schema } = mongoose;
+const { Schema, model } = mongoose;
 
-const drinkSchema = require('./Drink.js')
+const drinkSchema = require('./Drink.js').schema
 
 
 const orderSchema = new Schema({
@@ -10,9 +10,9 @@ const orderSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    drinks: [drinkSchema]
+    drinks: { type: [drinkSchema.schema], required: true },
 })
 
-const Order = model('Order', orderSchema);
+const Order = mongoose.model('Order', orderSchema);
 
 module.exports = Order;

@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/react-hooks';
 // import { ThemeProvider, Flex, Box, Grid} from '@chakra-ui/core';
 // import theme  from '../theme/theme';
 
-import CategoryMenu from "../../pages/Menu";
+import ChooseType from "../../components/ChooseType";
 import DrinkList from "../DrinkList";
 //import DrinkCard from '../components/DrinkCard';
 import { QUERY_DRINKS } from '../../utils/queries';

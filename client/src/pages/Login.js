@@ -37,6 +37,8 @@ const Login = (props) => {
     setFormState({
       email: '',
       password: '',
+      firstName: '',
+      lastName: '',
     });
   };
 
@@ -67,6 +69,22 @@ const Login = (props) => {
                   name="password"
                   type="password"
                   value={formState.password}
+                  onChange={handleChange}
+                />
+                <input
+                  className="form-input"
+                  placeholder="Jane"
+                  name="firstName"
+                  type="firstName"
+                  value={formState.firstName}
+                  onChange={handleChange}
+                />
+                <input
+                  className="form-input"
+                  placeholder="Doe"
+                  name="lastName"
+                  type="lastName"
+                  value={formState.lastName}
                   onChange={handleChange}
                 />
                 <button

@@ -2,8 +2,8 @@ import gql from "graphql-tag";
 
 
 export const QUERY_DRINKS = gql`
-  query getDrinks($category: ID) {
-    drinks(category: $category) {
+  query getDrinks($option: ID) {
+    drinks(option: $option) {
       _id
       name
       description
@@ -42,8 +42,7 @@ export const QUERY_ALL_DRINKS = gql`
 
 export const QUERY_OPTIONS = gql`
   {
-    options {
-      _id
+    option {
       name
     }
   }
