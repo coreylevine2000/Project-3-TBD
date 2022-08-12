@@ -40,7 +40,7 @@ type Auth {
 }
 
 type Query {
-    options: [Options]
+    options: [Option]
     drinks(options: ID, name: String): [Drink]
     order(_id:ID,): Order
     checkout(drinks: [ID]!): Checkout
