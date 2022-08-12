@@ -7,17 +7,17 @@ const resolvers = {
       options: async () => {
         return await Options.find()
       },
-      drinks: async (parent, { category, name }) => {
+      drinks: async (parent, { option, name }) => {
         const params = {};
-        if (category) {
-            params.category = category;
+        if (option) {
+            params.option = option;
         }
         if (name) {
             params.name = {
                 $regex: name
             };
         }
-        return await Drink.find(params).populate('category');
+        return await Drink.find(params).populate('options');
       },
     //   drink: async (parent, { _id }) => {
         // return await Product.findById(_id).populate('category');
@@ -35,7 +35,7 @@ const resolvers = {
         if(context.user) {
             const user = await User.findById(context.user._id).populate({
                 path: 'orders.drinks',
-                populate: 'category'
+                populate: 'options'
             });
             user.orders.sort((x, y) => y.purchaseDate - x.purchaseDate);
             return user;

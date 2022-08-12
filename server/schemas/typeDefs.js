@@ -15,11 +15,11 @@ type Drink {
     description: String
     image: String
     price: Float
-    options: Option
+    options: [Options]
 
 }
 
-type Option {
+type Options {
     _id: ID
     name: String
 }

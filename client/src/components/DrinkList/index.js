@@ -5,12 +5,15 @@ import { UPDATE_DRINKS } from "../../utils/actions";
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_DRINKS } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+
 
 
 function DrinkList({drinks}) {
   const [state, dispatch] = useStoreContext();
 
-  const { currentCategory } = state;
+  const { currentOption } = state;
 
   const { loading, data } = useQuery(QUERY_DRINKS);
 
@@ -34,32 +37,32 @@ function DrinkList({drinks}) {
   }, [data, loading, dispatch]);
 
   function filterDrinks() {
-    if (!currentCategory) {
+    if (!currentOption) {
       return state.drinks;
     }
 
-    return state.drinks.filter(drink => drink.category._id === currentCategory);
+    return state.drinks.filter(drink => drink.option._id === currentOption);
   }
 
   // return (
-  //   <Row >
-  //   <Box p={5}>
+  //   <Grid container spacing={2}>
+  //   <Grid item xs={8}>
   //       <h2>Pick your drink</h2>
   //       {state.drinks.length ? (
-  //           <Grid templateColumns={["repeat(1, 1fr)","repeat(1, 1fr)","repeat(3, 1fr)","repeat(3, 1fr)"]} gap={3}>
+  //           <Box >
   //               {filterDrinks().map(drink => (
   //                   <DrinkCard
   //                   key= {drink._id}
   //                   item={drink}
   //                   />
   //               ))}
-  //           </Grid>
+  //           </Box>
   //       ) : (
   //           <h3>You haven't added any drinks yet!</h3>
   //       )}
         
-  //   </Box>
-  //   </Rpw>
+  //   </Grid>
+  //   </Grid>
   // );
 }
 
