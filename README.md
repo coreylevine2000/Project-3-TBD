@@ -24,7 +24,7 @@ You can access from your favorite browser on your computer, ipad, or mobile phon
 # Deployment
 
 Link to app
-Github
+Click [here](https://github.com/coreylevine2000/Project-3-TBD) to go to Github.   
 
 # Technologies
 
