@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { Drink, Options, Order, User } = require('./models');
+const { Drink, Options, Order, User } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -19,9 +19,9 @@ const resolvers = {
         }
         return await Drink.find(params).populate('category');
       },
-      drink: async (parent, { _id }) => {
-        return await Product.findById(_id).populate('category');
-      },
+    //   drink: async (parent, { _id }) => {
+        // return await Product.findById(_id).populate('category');
+    //   },
       order: async (parent, { _id }, context) => {
         if (context.user) {
             const user = await User.findById(context.user._id).populate({

@@ -3,6 +3,18 @@ import { Link } from 'react-router-dom';
 
 import Auth from '../../utils/auth';
 
+const styles = {
+  buttonStyle: {
+    background: 'Purple',
+  },
+  headerStyle: {
+    background: '#8d4397'
+  }
+};
+
+
+
+
 const Header = () => {
   const logout = (event) => {
     event.preventDefault();
@@ -10,9 +22,9 @@ const Header = () => {
   };
   return (
     <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
-      <div className="container flex-row justify-space-between-lg justify-center align-center">
+      <div style={styles.headerStyle} className="container flex-row justify-space-between-lg justify-center align-center">
         <div>
-          <Link className="text-light" to="/">
+          <Link style={styles.headerStyle} className="text-light" to="/">
             <h1 className="m-0">Ready, Drink, Go!</h1>
           </Link>
           <p className="m-0">Beat the crowds at the bar by ordering your drink ahead of time</p>
@@ -29,10 +41,10 @@ const Header = () => {
             </>
           ) : (
             <>
-              <Link className="btn btn-lg btn-info m-2" to="/login">
+              <Link style={styles.buttonStyle} className="btn btn-lg btn-info m-2" to="/login">
                 Login
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
+              <Link style={styles.buttonStyle} className="btn btn-lg btn-light m-2" to="/signup">
                 Signup
               </Link>
             </>
