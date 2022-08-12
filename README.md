@@ -1,17 +1,16 @@
 # Ready, Drink, GO!
 
+
+
 # DESCRIPTION
 
 Users can order menu items by adding items to their cart, modify orders, and also purchase the items using credit/debit card through our safe and protected platform. Orders will be automatically saved in their profile for quick reorder of favorites.
 
 # Table of Contents
 
-- Installation
-- Usage
-- Deployment
-- Technologies
-- Future Development
-- Contributors
+| Installation          | Usage         |
+| Deployment            | Technologies  |
+| Future Development    | Contributors  |
 
 # Installation
 
