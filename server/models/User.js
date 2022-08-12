@@ -1,4 +1,6 @@
+const mongoose = require('mongoose');
 const { Schema, model } = require('mongoose');
+
 const bcrypt = require('bcrypt');
 
 const orderSchema = require('./Order');
@@ -30,7 +32,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    savedOrder: [orderSchema],
+    orders: { type: [orderSchema.schema], required: true },
   },
   // set this to use virtual below
   {
@@ -56,6 +58,6 @@ userSchema.methods.isCorrectPassword = async function (password) {
 };
 
 
-const User = model('User', userSchema);
+const User = mongoose.model('User', userSchema);
 
 module.exports = User;

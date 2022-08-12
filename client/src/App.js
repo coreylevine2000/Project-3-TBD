@@ -11,8 +11,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-import SingleThought from './pages/Menu';
-import Profile from './pages/MyDrinks';
+import Menu from './pages/Menu';
+import MyDrinks from './pages/MyDrinks';
 import Header from './components/Header';
 // import Footer from './components/Footer';
 
@@ -60,17 +60,17 @@ function App() {
                 path="/signup" 
                 element={<Signup />}
               />
-              <Route 
+              {/* <Route 
                 path="/me" 
-                element={<Profile />}
+                element={<MyDrinks />}
+              /> */}
+              <Route 
+                path="/Menu" 
+                element={<Menu />}
               />
               <Route 
-                path="/profiles/:username" 
-                element={<Profile />}
-              />
-              <Route 
-                path="/thoughts/:thoughtId" 
-                element={<SingleThought />}
+                path="/MyDrinks" 
+                element={<MyDrinks />}
               />
             </Routes>
           </div>

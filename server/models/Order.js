@@ -10,9 +10,9 @@ const orderSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    drinks: [drinkSchema]
+    drinks: { type: [drinkSchema.schema], required: true },
 })
 
-const Order = model('Order', orderSchema);
+const Order = mongoose.model('Order', orderSchema);
 
 module.exports = Order;

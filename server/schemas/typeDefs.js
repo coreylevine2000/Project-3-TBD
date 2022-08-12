@@ -15,11 +15,11 @@ type Drink {
     description: String
     image: String
     price: Float
-    options: Option
+    options: [Options]
 
 }
 
-type Option {
+type Options {
     _id: ID
     name: String
 }
@@ -40,7 +40,7 @@ type Auth {
 }
 
 type Query {
-    options: [Options]
+    options: [Option]
     drinks(options: ID, name: String): [Drink]
     order(_id:ID,): Order
     checkout(drinks: [ID]!): Checkout

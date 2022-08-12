@@ -30,15 +30,15 @@ export const reducer = (state, action) => {
                 ...state,
                 cart: [...state.checkout, ...action.drinks]
             };
-        case REMOVE_FROM_CHECKOUT:
-            let newState = state.checkout.filter(item => {
-                return item._id !== action._id;
-            });
-            return {
-                ...state,
-                checkoutOpen: newState.length > 0,
-                checkout: newState
-            };
+        // case REMOVE_FROM_CHECKOUT:
+        //     let newState = state.checkout.filter(item => {
+        //         return item._id !== action._id;
+        //     });
+        //     return {
+        //         ...state,
+        //         checkoutOpen: newState.length > 0,
+        //         checkout: newState
+        //     };
         case CLEAR_CHECKOUT:
             return {
                 ...state,
