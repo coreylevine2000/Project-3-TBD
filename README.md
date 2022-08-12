@@ -6,7 +6,7 @@ Users can order menu items by adding items to their cart, modify orders, and als
 
 ## Table of Contents
 
-* [Installation](https://github.com/coreylevine2000/Project-3-TBD#Installation)
+* [Installation](#Installation)
 * [Usage](https://github.com/coreylevine2000/Project-3-TBD#Usage)
 * [Deployment](https://github.com/coreylevine2000/Project-3-TBD#Deployment)
 * [Technologies](https://github.com/coreylevine2000/Project-3-TBD#Technologies)
