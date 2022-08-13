@@ -6,7 +6,9 @@ type User {
     _id: ID
     username: String!
     email: String!
-    savedOrders: [Order]
+    firstName: String!
+    lastName: String!
+    orders: [Order]
 }
 
 type Drink {
@@ -40,8 +42,7 @@ type Auth {
 }
 
 type Query {
-    options: [Option]
-    drinks(options: ID, name: String): [Drink]
+    options: [Options]
     order(_id:ID,): Order
     checkout(drinks: [ID]!): Checkout
     user: User
@@ -49,7 +50,7 @@ type Query {
 }
 type Mutation {
     addUser(firstName: String!, lastName: String!, username: String!, email: String!, password: String!): Auth
-    login(username: String!, password: String!): Auth
+    login(email: String!, password: String!): Auth
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     addDrink(drinks: [ID]!): Order
 

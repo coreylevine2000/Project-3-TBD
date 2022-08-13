@@ -7,20 +7,20 @@ const resolvers = {
       options: async () => {
         return await Options.find()
       },
-      drinks: async (parent, { option, name }) => {
-        const params = {};
-        if (option) {
-            params.option = option;
-        }
-        if (name) {
-            params.name = {
-                $regex: name
-            };
-        }
-        return await Drink.find(params).populate('options');
-      },
+    //   drink: async (parent, { option, name }) => {
+    //     const params = {};
+    //     if (option) {
+    //         params.option = option;
+    //     }
+    //     if (name) {
+    //         params.name = {
+    //             $regex: name
+    //         };
+    //     }
+    //     return await Drink.find(params).populate('options');
+    //   },
     //   drink: async (parent, { _id }) => {
-        // return await Product.findById(_id).populate('category');
+    //     return await Drink.findById(_id).populate('options');
     //   },
       order: async (parent, { _id }, context) => {
         if (context.user) {
@@ -61,7 +61,7 @@ const resolvers = {
             if (!user) {
                 throw new AuthenticationError('Wrong email or password')
             }
-            const correctPassword = await user.isCorrectPassowrd(password);
+            const correctPassword = await user.isCorrectPassword(password);
 
             if (!correctPassword) {
                 throw new AuthenticationError('Wrong Password')
