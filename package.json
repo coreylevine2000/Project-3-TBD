@@ -17,6 +17,7 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
-
+    "@apollo/react-hooks": "^4.0.0",
+    "heroku": "^7.60.2"
   }
 }
