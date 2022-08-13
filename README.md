@@ -52,7 +52,7 @@ Cloud platform that lets companies deploy web applications.
 ## Future Development
 
 **Screenshots**
-![Home Page](/client/src/images/temp-home-page.png?raw=true "Home Page")
+![Home Page](/client/src/images/project-3-demo.png?raw=true "Home Page")
 
 
 - **Add Payment method via stripe**
