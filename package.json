@@ -1,9 +1,6 @@
 {
-  "name": "project-3-TBD",
+  "name": "programming-thoughts",
   "version": "1.0.0",
-  "engines" : {
-    "node" : "16.14.2"
-  },
   "description": "",
   "main": "server/server.js",
   "scripts": {
@@ -20,27 +17,6 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
-    "@apollo/react-hooks": "^4.0.0",
-    "@emotion/core": "^11.0.0",
-    "@emotion/styled": "^11.10.0",
-    "@stripe/stripe-js": "^1.35.0",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^14.4.3",
-    "apollo-boost": "^0.4.9",
-    "apollo-link-context": "^1.0.20",
-    "bootstrap": "^5.2.0",
-    "client": "^0.0.1",
-    "emotion-theming": "^11.0.0",
-    "graphql": "^15.8.0",
-    "graphql-tag": "^2.12.6",
-    "heroku": "^7.62.0",
-    "jwt-decode": "^3.1.2",
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.5.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "^5.0.1",
-    "reactstrap": "^9.1.3"
+
   }
 }
