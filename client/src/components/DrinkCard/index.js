@@ -7,18 +7,10 @@ import Col from 'react-bootstrap/Col';
 // TO DO: MAKE MORE VARIABLES FOR THE IMAGE USING THE ABOVE FORMAT
 
 
-const styles = {
-  buttonStyle: {
-    background: 'Purple',
-  },
-};
-
-
-
 function DrinkCard(props) {
   const{drink} = props
   return (
-    <Col>
+    <div class="single-card">
     <Card style={{ width: '18rem', }}>
       <Card.Img variant="top" src={drink.image} />
       <Card.Body>
@@ -26,10 +18,10 @@ function DrinkCard(props) {
         <Card.Text>
           {drink.description}
         </Card.Text>
-        <Button style={styles.buttonStyle} variant="primary">Add {drink.name} to cart</Button>
+        <Button className='purple-button' variant="primary">Add {drink.name} to cart</Button>
       </Card.Body>
     </Card>
-    </Col>
+    </div>
   );
 };
 

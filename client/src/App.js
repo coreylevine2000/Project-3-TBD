@@ -16,6 +16,8 @@ import MyDrinks from './pages/MyDrinks';
 import Header from './components/Header';
 // import Footer from './components/Footer';
 
+import './scss/styles.js';
+
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: '/graphql',

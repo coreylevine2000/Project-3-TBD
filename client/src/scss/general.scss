@@ -1,0 +1,53 @@
+$frustration: #8d4397;
+
+body {
+    background: $frustration;
+}
+
+.purple-button {
+    background: purple;
+    color: white;
+    border: purple;
+
+}
+
+.purple-button:hover {
+    background-color: #b980c0;
+    color: black;
+}
+
+.header-link {
+    text-decoration: none;
+}
+
+.headerStyle {
+    background: $frustration;
+}
+
+.drink-card-display {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.single-card {
+    padding: 1rem;
+    width: 25%;
+    
+    .card {
+        height: 100%; 
+    }
+}
+
+.choose-type {
+    .nav-link {
+        background: purple;
+        color: white;
+        border: purple;
+    }
+
+    .nav-link:hover {
+        background-color: #b980c0;
+        color: black;
+
+    }
+}
