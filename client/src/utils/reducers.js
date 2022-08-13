@@ -22,13 +22,13 @@ export const reducer = (state, action) => {
             return {
                 ...state,
                 checkoutOpen: true,
-                checkout: [...state.cart, action.item]
+                checkout: [...state.checkout, action.item]
             
             };
         case ADD_MULTIPLE_TO_CHECKOUT:
             return {
                 ...state,
-                cart: [...state.checkout, ...action.drinks]
+                checkout: [...state.checkout, ...action.drinks]
             };
         // case REMOVE_FROM_CHECKOUT:
         //     let newState = state.checkout.filter(item => {

@@ -6,10 +6,12 @@
   "dependencies": {
     "@apollo/client": "^3.5.8",
     "@apollo/react-hooks": "^4.0.0",
+    "@chec/commerce.js": "^2.8.0",
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
     "@mui/material": "^5.10.0",
     "@stripe/stripe-js": "^1.35.0",
+    "@types/chec__commerce.js": "^2.8.5",
     "boostrap": "^2.0.0",
     "bootstrap": "^5.2.0",
     "graphql": "^15.4.0",

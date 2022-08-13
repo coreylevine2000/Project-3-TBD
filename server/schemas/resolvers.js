@@ -9,7 +9,7 @@ const resolvers = {
       },
     //   drink: async (parent, { option, name }) => {
     //     const params = {};
-    //     if (option) {
+    //     if (options) {
     //         params.option = option;
     //     }
     //     if (name) {

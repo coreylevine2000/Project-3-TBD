@@ -7,6 +7,7 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Commerce from '@chec/commerce.js';
 
 import Home from './pages/Home';
 import Signup from './pages/Signup';
@@ -24,6 +25,7 @@ const httpLink = createHttpLink({
   credentials: 'same-origin'
 
 });
+
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
 const authLink = setContext((_, { headers }) => {
@@ -43,6 +45,12 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
+
+
+
+
+
+
 
 function App() {
   return (
@@ -64,10 +72,6 @@ function App() {
                 path="/signup" 
                 element={<Signup />}
               />
-              {/* <Route 
-                path="/me" 
-                element={<MyDrinks />}
-              /> */}
               <Route 
                 path="/Menu" 
                 element={<Menu />}

@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import Form from 'react-bootstrap/Form';
+import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
 import Auth from '../utils/auth';
 
 const Login = (props) => {
@@ -43,18 +45,23 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
-          <div className="card-body">
+    
+
+
+
+
+    <Container fluid>
+      <Card >
+        <Card className="card">
+          <Card.Title className="card-header bg-dark text-light p-2">Login</Card.Title>
+          <Card.Body>
             {data ? (
-              <p>
+              <Card.Subtitle>
                 Success! You may now head{' '}
                 <Link to="/">back to the homepage.</Link>
-              </p>
+              </Card.Subtitle>
             ) : (
-              <form onSubmit={handleFormSubmit}>
+              <Form onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
                   placeholder="Your email"
@@ -78,7 +85,7 @@ const Login = (props) => {
                 >
                   Submit
                 </button>
-              </form>
+              </Form>
             )}
 
             {error && (
@@ -86,10 +93,10 @@ const Login = (props) => {
                 {error.message}
               </div>
             )}
-          </div>
-        </div>
-      </div>
-    </main>
+          </Card.Body>
+        </Card>
+      </Card>
+    </Container>
   );
 };
 
