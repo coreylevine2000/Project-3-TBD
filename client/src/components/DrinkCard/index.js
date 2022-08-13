@@ -12,13 +12,17 @@ function DrinkCard(props) {
   return (
     <div class="single-card">
     <Card style={{ width: '18rem', }}>
-      <Card.Img variant="top" src={drink.image} />
+      <Card.Img class="card-image" variant="top" src={drink.image} />
       <Card.Body>
-        <Card.Title>{drink.name}</Card.Title>
-        <Card.Text>
-          {drink.description}
-        </Card.Text>
-        <Button className='purple-button' variant="primary">Add {drink.name} to cart</Button>
+        <div>
+          <Card.Title>{drink.name}</Card.Title>
+          <Card.Text>
+            {drink.description}
+          </Card.Text>
+        </div>
+        <div className="pt-2">
+          <Button className='purple-button' variant="primary">Add {drink.name} to cart</Button>
+        </div>
       </Card.Body>
     </Card>
     </div>
