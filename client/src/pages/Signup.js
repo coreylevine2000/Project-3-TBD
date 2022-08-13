@@ -10,6 +10,8 @@ const Signup = () => {
   const [formState, setFormState] = useState({
     username: '',
     email: '',
+    firstName: '',
+    lastName: '',
     password: '',
   });
   const [addUser, { error, data }] = useMutation(ADD_USER);
@@ -73,6 +75,22 @@ const Signup = () => {
                   name="password"
                   type="password"
                   value={formState.password}
+                  onChange={handleChange}
+                />
+                 <input
+                  className="form-input"
+                  placeholder="Jane"
+                  name="firstName"
+                  type="firstName"
+                  value={formState.firstName}
+                  onChange={handleChange}
+                />
+                <input
+                  className="form-input"
+                  placeholder="Doe"
+                  name="lastName"
+                  type="lastName"
+                  value={formState.lastName}
                   onChange={handleChange}
                 />
                 <button

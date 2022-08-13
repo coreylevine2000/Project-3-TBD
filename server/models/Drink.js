@@ -23,7 +23,6 @@ const drinkSchema = new Schema({
         type: String
     },
     options: { type: [optionsSchema.schema], required: true },
-        // ref: 'Options'
     
 
 
