@@ -1,12 +1,12 @@
-$frustration: #8d4397;
+$frustration: #e7d3d3;
 
 body {
     background: $frustration;
 }
 
 .purple-button {
-    background: purple;
-    color: white;
+    background: #fff1cf;
+    color: black;
     border: purple;
 
 }
@@ -20,9 +20,23 @@ body {
     text-decoration: none;
 }
 
-.headerStyle {
-    background: $frustration;
+.card-image {
+    width: 250px;
+    height: auto;
+    margin: auto;
+    margin-top: 15px;
 }
+
+h1 {
+    color: #fff1cf
+}
+
+.headerStyle {
+    background: #8b2323;
+    color: #fff1cf
+}
+
+
 
 .drink-card-display {
     display: flex;
@@ -53,17 +67,16 @@ body {
         }
     }
 }
-
 .choose-type {
     .nav-link {
-        background: purple;
-        color: white;
+        background: #fff1cf;
+        color: black;
         border: purple;
     }
 
     .nav-link:hover {
-        background-color: #b980c0;
-        color: black;
+        background-color: #a24e4e;
+        color: white;
 
     }
 }
