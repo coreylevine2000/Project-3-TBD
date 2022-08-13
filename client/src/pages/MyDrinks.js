@@ -50,17 +50,17 @@ const MyDrinks = () => {
     return sum.toFixed(2);
   }
 
-  function submitCheckout() {
-    const drinkIds = [];
+  // function submitCheckout() {
+  //   const drinkIds = [];
 
-    state.checkout.forEach((item) => {
-      drinkIds.push(item._id);
-    });
+  //   state.checkout.forEach((item) => {
+  //     drinkIds.push(item._id);
+  //   });
 
-    getCheckout({
-      variables: { drinks: drinkIds }
-    });
-  }
+  //   getCheckout({
+  //     variables: { drinks: drinkIds }
+  //   });
+  // }
 
   return (
 
