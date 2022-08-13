@@ -44,6 +44,26 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+
+const [cart, setCart] = useState({});
+
+const handleAddToCart = (productId, quantity) => {
+  commerce.cart.add(productId, quantity).then((item) => {
+    setCart(item.cart);
+  }).catch((error) => {
+    console.error('There was an error adding the item to the cart', error);
+  });
+}
+
+<ProductsList
+  products={products}
+  onAddToCart={handleAddToCart}
+/>
+
+
+
+
+
 function App() {
   return (
     <ApolloProvider client={client}>
@@ -64,10 +84,6 @@ function App() {
                 path="/signup" 
                 element={<Signup />}
               />
-              {/* <Route 
-                path="/me" 
-                element={<MyDrinks />}
-              /> */}
               <Route 
                 path="/Menu" 
                 element={<Menu />}
