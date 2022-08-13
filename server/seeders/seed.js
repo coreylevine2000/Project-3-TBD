@@ -108,10 +108,10 @@ db.once('open', async () => {
     await User.deleteMany();
 
     await User.create({
-        firstName: 'Pamela',
-        lastName: 'Washington',
-        email: 'pamela@testmail.com',
-        username: 'PWash',
+        firstName: 'Oscar',
+        lastName: 'Salgado',
+        email: 'Oscar@testmail.com',
+        username: 'Plavala',
         password: 'password12345',
         // orders: [
         //     {
@@ -121,10 +121,10 @@ db.once('open', async () => {
     });
 
     await User.create({
-        firstName: 'Elijah',
-        lastName: 'Holt',
-        username: 'EHolt',
-        email: 'eholt@testmail.com',
+        firstName: 'Laura',
+        lastName: 'Antunez',
+        username: 'lantunez',
+        email: 'Laura@testmail.com',
         password: 'password12345'
     });
 
