@@ -7,6 +7,7 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Commerce from '@chec/commerce.js';
 
 import Home from './pages/Home';
 import Signup from './pages/Signup';
@@ -24,6 +25,7 @@ const httpLink = createHttpLink({
   credentials: 'same-origin'
 
 });
+
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
 const authLink = setContext((_, { headers }) => {
@@ -45,20 +47,6 @@ const client = new ApolloClient({
 });
 
 
-const [cart, setCart] = useState({});
-
-const handleAddToCart = (productId, quantity) => {
-  commerce.cart.add(productId, quantity).then((item) => {
-    setCart(item.cart);
-  }).catch((error) => {
-    console.error('There was an error adding the item to the cart', error);
-  });
-}
-
-<ProductsList
-  products={products}
-  onAddToCart={handleAddToCart}
-/>
 
 
 

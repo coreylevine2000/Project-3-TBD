@@ -3,9 +3,7 @@ import CartItem from '../CartItem';
 
 const Checkout = ({ cart }) => {
 
-  const handleEmptyCart = () => {
-    onEmptyCart();
-  }
+ 
 
   const renderEmptyMessage = () => {
     if (cart.total_unique_items > 0) {
@@ -50,9 +48,6 @@ const Checkout = ({ cart }) => {
   );
 };
 
-Cart.propTypes = {
-    cart: PropTypes.object,
-    onEmptyCart: () => {},
-};
+
 
 export default Checkout;

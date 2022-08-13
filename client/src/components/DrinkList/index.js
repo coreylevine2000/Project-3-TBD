@@ -10,6 +10,13 @@ import LongIslandTea from '../../images/longislandicetea.jpg';
 import Gingerale from '../../images/gingerale.jpg';
 import VMojito from '../../images/viginmojito.jpg';
 import Suicide from '../../images/suicidenoalcohol.jpg';
+import LavenderLemonade from '../../images/lavenderlemonade.jpg';
+import Terrapin from '../../images/terrapin.jpg';
+import Zombie from '../../images/zombiecocktail.jpg';
+import CreatureComforts from '../../images/creaturecomforts.jpg';
+import Sprite from '../../images/sprite.jpg';
+
+
 
 const cocktails = [
   {
@@ -38,25 +45,43 @@ const cocktails = [
       description: 'Cocktail made with vodka, tequila, light rum, triple sec, gin, and a splash of cola, which gives the drink the same hue as iced tea.',
       image: LongIslandTea,
       price: 9.00,
-      quantity: 1
-  }
+  },
+
+  {
+      name: 'Zombie',
+      description: 'A famous tropical rum cocktail. It is a tasty blend of rum and fruit juices.',
+      image: Zombie,
+      price: 9.25,
+  },
 ];
 
 const beers = [
   {
-    name: 'Merica Beer',
-    description: 'Guns, God, and Beer',
-    image: Suicide,
-    price: 2.25,
-    quantity: 1
+      name: 'Merica Beer',
+      description: 'Guns, God, and Beer',
+      image: Suicide,
+      price: 2.25,
   },
   {
-      name: 'Wheat Juice',
-      description: 'Sad.',
+      name: 'GingerAle',
+      description: 'Sweetened carbonated beverage of which the predominating flavour and pleasant warmth are derived mainly from the underground stem, or rhizome, of ginger Zingiber officinale.',
       image: Gingerale,
       price: 3.50,
-      quantity: 1
-  }
+  },
+  {
+      name: 'Terrapin Luau Krunkles IPA',
+      description: 'An IPA beer infused with tartness from passionfruit and a firm hop bitterness that balances the pale malt base. ',
+      image: Terrapin,
+      price: 3.50,
+  },
+  {
+      name: 'Automatic Creature Comforts IPA',
+      description: 'Automatic is a bright, refreshing, and drinkable American Pale Ale. It features a delicate and balanced hop flavor and aroma with notes of berry, citrus, and pine.',
+      image: CreatureComforts,
+      price: 3.50,
+  },
+
+  
 
 ];
 
@@ -65,26 +90,32 @@ const wimps = [
       name: 'Suicide',
       description: 'A cup filled to the brim with every single soft drink available at a restaurants soda machine',
       image: Suicide,
-      // category: categories[1]._id,
       price: 2.25,
-      quantity: 1
   },
   {
       name: 'Ginger ale',
       description: 'A carbonated beverage made with ginger root and a sweetener.',
       image: Gingerale,
-      // category: categories[1]._id,
       price: 3.50,
-      quantity: 1
   },
   {
       name: 'Virgin Mojito',
       description: 'A refreshing drink blend of mint and lemon flavours with no rum',
       image: VMojito,
-      // category: categories[1]._id,
       price: 5.75,
-      quantity: 1
-  }
+  },
+  {
+    name: 'Lavender Lemonade',
+    description: 'A lavender infused lemonade',
+    image: LavenderLemonade,
+    price: 4.25,
+  },
+  {
+    name: 'Sprite',
+    description: 'Classic Fountain Drink',
+    image: Sprite,
+    price: 4.25,
+  },
 ];
 
 function DrinkList(props) {
@@ -111,6 +142,8 @@ function DrinkList(props) {
       </div>
   );
 }
+
+
 
 
 
