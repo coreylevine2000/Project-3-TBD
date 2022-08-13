@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/react-hooks';
 
 
 import CategoryMenu from "../components/Menu";
-import DrinkList from "../components/DrinkList";
+import DrinkListComponent from "../components/DrinkList";
 //import DrinkCard from '../components/DrinkCard';
 import { QUERY_DRINKS } from '../utils/queries';
 import { useStoreContext } from "../utils/GlobalState";
